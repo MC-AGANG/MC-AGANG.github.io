@@ -8,6 +8,11 @@ body{
 	background: #ffffff;
 	font-family: 'Open Sans', sans-serif;
 }
+.centerbox{
+	margin-left:auto;
+	margin-right: auto;
+	padding-left:50px;
+}
 .header{
 	background: url(../images/banner.jpg)0px 0px;
 	width: 100%;
@@ -45,31 +50,43 @@ img.clock,img.clock-item{
 	background:#1EDBB5;
 	height: 190px;
 }
-.grid-tv:hover,.men:hover,.grid-msg:hover{
-	background:#1BBC9B;
-}
 .tv-portfolio:hover{
 	background:#1EDBB5;
 }
 .men{
 	width: 48%;
 }
-.grid-tv h6,.men h6,.grid-msg h6{
-	color: #fff;
-	font-size: 2em;
-	padding: 0;
-	margin: 0;
-	text-transform: uppercase;
-}
 .tv-portfolio{	
 	background: #1BBC9B;	
 }
 .grid-msg{
+	padding-top:1.5em;
 	float: left;
-	width: 19.9%;
+	width: 188px;
 	text-align: center;
 	background:#1EDBB5;
-	height: 189px;
+	height: 188px;
+}
+.grid-msg:hover{
+	background:#18B293
+}
+.dgrid-msg{
+	padding-top:1.5em;
+	float: left;
+	width: 188px;
+	text-align: center;
+	background:#18B293;
+	height: 188px;
+}
+.dgrid-msg:hover{
+	background:#1EDBB5
+}
+.grid-pic{
+	float: left;
+	width: 188px;
+	text-align: center;
+	background:#1EDBB5;
+	height: 188px;
 }
 .grid-head-contact {
 	padding: 0 0em 0 13.5em;
@@ -747,9 +764,6 @@ h4.footer-class span{
 	
 }
 @media(max-width:1366px){
-.grid-msg {
-	height: 189px;
-}
 }
 @media(max-width:1280px){
 	
@@ -761,15 +775,8 @@ h4.footer-class span{
 .grid-head-contact {
 	padding: 0 0em 0 11.2em;
 }	
-.grid-msg {
-	height: 157px;
-	width: 20%;
-}
-.grid-tv h6, .men h6, .grid-msg h6 {
-	font-size: 1.7em;
-}
 .header {
-	height: 900px;
+	height: auto;
 }
 .team-head h3 {
 	width: 41%;
@@ -788,17 +795,11 @@ h4.footer-class span{
 .grid-tv, .men {
 	height: 118px;
 }
-.grid-tv h6, .men h6, .grid-msg h6 {
-	font-size: 1.4em;
-}
-.grid-msg {
-	height: 120px;
-}
 .grid-head-contact {
 	padding: 0 0em 0 8.5em;
 }
 .header {
-	height: 765px;
+	height: auto;
 	padding: 7em 0;
 }
 .team-head h3 {
@@ -852,23 +853,17 @@ h4.footer-class span{
 .logo-head p {
 	font-size: 1.4em;
 }
-.grid-tv h6, .men h6, .grid-msg h6 {
-	font-size: 1.3em;
-}
 .grid-tv, .men {
 	height: 96px;
 }
 img.clock {
 	width: 66%;
 }
-.grid-msg {
-	height: 99px;
-}
 .grid-head-contact {
 	padding: 0 0em 0 7em;
 }
 .header {
-	height: 602px;
+	height: auto;
 	padding: 5em 0;
 }
 .up {
@@ -934,9 +929,6 @@ img.clock {
 .grid-tv, .men {
 	height: 72px;
 }
-.grid-msg {
-	height: 72px;
-}
 .grid-head-contact {
 	padding: 0 0em 0 5.1em;
 }
@@ -944,7 +936,7 @@ img.clock {
 	padding: 5em 0;
 }
 .header {
-	height: 485px;
+	height: auto;
 }
 .about h3 {
 	font-size: 2.5em;
@@ -1065,9 +1057,6 @@ span.drop {
 h4.footer-class {
 	padding: 0 0 14px;
 }
-.grid-tv h6, .men h6, .grid-msg h6 {
-	font-size: 0.9em;
-}
 }
 @media(max-width:320px){
 .logo-head p {
@@ -1075,9 +1064,6 @@ h4.footer-class {
 	overflow: hidden;
 	height: 20px;
 	padding: 0;
-}
-.grid-msg {
-	height: 46px;
 }
 .grid-tv, .men {
 	height: 44px;
@@ -1089,7 +1075,7 @@ h4.footer-class {
 	padding: 2em 0;
 }
 .header {
-	height: 273px;
+	height: auto;
 	padding: 3em 0 2em;
 }
 .header-home {
@@ -1275,9 +1261,6 @@ input[type="submit"] {
 }
 h4.footer-class {
 	font-size: 1.5em;
-}
-.grid-tv h6, .men h6, .grid-msg h6 {
-	font-size:0.6em;
 }
 .up-grid{
 	width:20%;
