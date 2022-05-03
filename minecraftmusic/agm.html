@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AGM3_AGANG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- css -->
+<link rel="icon" href="favicon.ico">
+<link href="css/bilibili.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="css/jcarousel.css" rel="stylesheet" />
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<!-- start header -->
+		<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <span class="navbar-header"><a class="navbar-brand" href="../index.html"><img src="img/logo.png" alt="logo"/></a></span>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html">首页</a></li> 
+						<li><a href="../about/index.html">关于</a></li>
+						<li><a href="../software/index.html">软件</a></li>
+                        <li class="active"><a href="../minecraftmusic/index.html">红石音乐</a></li>
+                        <li><a href="../qqgroup/index.html">QQ群</a></li>
+                        <li><a href="https://space.bilibili.com/219556059">B站主页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header><!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">资源包详情</h2>
+			</div>
+		</div>
+	</div>
+	<section id="content">
+	<div class="container">	 
+		<h1>
+			AGM3系列资源包
+		</h1>
+		<h4>截至目前，AGM3仍为音色最优秀的midi音色红石音乐资源包。</h4>
+		<div class="col-md-12">
+			<font color="0">AGM3公开发行的版本总共4个版本：3.0B、3.0J、3.1B、3.1J，其区别如下：</font><br>
+			<font color="0">后缀B代表Bedrock，适用于基岩版；后缀J代表Java，适用于Java版。</font><br>
+			<font color="0">3.0为单声道，借此可以通过改变发声位置来调整声像，且音量会随着距离衰减，代价为自带的声场非常窄。</font><br>
+			<font color="0">3.1为双声道，提供良好的声场，音量不会因为距离改变而衰减，代价为发声位置不起作用，超出可听见范围后声音会突然消失。</font><br>
+		</div>
+	
+		<div class="col-md-6">
+			<font color="#000000">大小：<br></font>
+			<font color="#606060">3.0B：853.08MB<br></font>
+			<font color="#606060">3.0J：853.04MB<br></font>
+			<font color="#606060">3.1B：767.84MB<br></font>
+			<font color="#606060">3.1J：768.74MB<br></font>
+		</div>
+		<div class="col-md-6">
+			<font color="#000000">Minecraft版本支持：<br></font>
+			<font color="#606060">基岩版：1.0以上<br></font>
+			<font color="#606060">Java版：1.12以上<br></font>
+		</div>
+	</div>
+	<div class="container">
+		<div class="container">
+			<br>
+			<br>
+			<br>
+		</div>
+		<div class="col-md-6 col-lg-offset-0 col-lg-4">
+			<a href="https://pan.baidu.com/s/1GKg_7Ef5Y8n0VvtLrS4OTQ">
+				<img class="img-responsive" width="300" src="./img/dlpan.png" alt="">
+			</a>
+		</div>
+		<div class="col-md-4">
+
+			<h3>提取码：AGM3</h3>
+		</div>
+	</div>
+		<div class="container">
+			<h2>
+				使用说明
+			</h2>
+			<font color = "#606060">
+				使用命令方块发声。<br>
+				指令格式如下<br>
+				基岩版：<br>
+				playsound playsound agm乐器编号.l数字音高 目标玩家 x坐标 y坐标 z坐标 音量<br>
+				Java版：<br>
+				playsound agm乐器编号.l数字音高 通道 目标玩家 x坐标 y坐标 z坐标 音量<br>
+				其中，目标玩家为玩家游戏内名称，或者用@a代表所以玩家，@p代表最近的玩家。<br>
+				坐标好理解，不多讲，可以用~ ~ ~来代表当前位置。<br>
+				音量范围为0到1，可以是小数，超过1后不会继续变响，但会增加能听到这个声音的距离。<br>
+				数字音高中央C为60，每增加1代表升高一个半音。<br>
+				乐器编号范围是0到128，其中0为鼓组，1到128对应关系如下：<br>
+				钢琴<br>
+1 Acoustic Grand Piano 大钢琴<br>
+2 Piano 2 钢琴2（音色优于编号为1的钢琴<br>
+3 Electric Grand Piano 电钢琴<br>
+4 Honky-Tonk Piano 酒吧钢琴<br>
+5 Rhodes Piano 练习音钢琴<br>
+6 Chorused Piano 合唱加钢琴<br>
+7 Harpsichord 拨弦古钢琴<br>
+8 Clavinet 击弦古钢琴<br>
+打击乐器<br>
+9 Celesta 钢片琴<br>
+10 Glockenspiel 钟琴<br>
+11 Music Box 八音盒<br>
+12 Vibraphone 电颤琴<br>
+13 Marimba 马林巴<br>
+14 Xylophone 木琴<br>
+15 Tubular Bells 管钟<br>
+16 Dulcimer 扬琴<br>
+风琴<br>
+17 Hammond Organ 击杆风琴<br>
+18 Percussive Organ 打击型风琴<br>
+19 Rock Organ 摇滚风琴<br>
+20 Church Organ 管风琴<br>
+21 Reed Organ 簧风琴<br>
+22 Accordion 手风琴<br>
+23 Harmonica 口琴<br>
+24 Tango Accordian 探戈手风琴<br>
+吉他<br>
+25 Acoustic Guitar (nylon) 尼龙弦吉他<br>
+26 Acoustic Guitar(steel) 钢弦吉他<br>
+27 Electric Guitar (jazz) 爵士乐电吉他<br>
+28 Electric Guitar (clean) 清音电吉他<br>
+29 Electric Guitar (muted) 弱音电吉他<br>
+30 Overdriven Guitar 驱动音效吉他<br>
+31 Distortion Guitar 失真音效吉他<br>
+32 Guitar Harmonics 吉他泛音<br>
+贝司<br>
+33 Acoustic Bass 原声贝司<br>
+34 Electric Bass(finger) 指拨电贝司<br>
+35 Electric Bass(pick) 拨片拨电贝司<br>
+36 Fretless Bass 无品贝司<br>
+37 Slap Bass 1 击弦贝司1<br>
+38 Slap Bass 2 击弦贝司2<br>
+39 Synth Bass 1 合成贝司1<br>
+40 Synth Bass 2 合成贝司2<br>
+弦乐独奏<br>
+41 Violin 小提琴<br>
+42 Viola 中提琴<br>
+43 Cello 大提琴<br>
+44 Contrabass 低音提琴<br>
+45 Tremolo Strings 弦乐震音<br>
+46 Pizzicato Strings 弦乐拨奏<br>
+47 Orchestral Harp 竖琴<br>
+48 Timpani 定音鼓<br>
+合唱合奏<br>
+49 String Ensemble 1 弦乐合奏1（适合伴奏）<br>
+50 String Ensemble 2 弦乐合奏2（适合主旋律）<br>
+51 SynthStrings 1 合成弦乐1<br>
+52 SynthStrings 2 合成弦乐2<br>
+53 Choir Aahs 合唱“啊”音<br>
+54 Voice Oohs 人声“嘟”音<br>
+55 Synth Voice 合成人声<br>
+56 Orchestra Hit 乐队打击乐<br>
+铜管乐器<br>
+57 Trumpet 小号<br>
+58 Trombone 长号<br>
+59 Tuba 大号<br>
+60 Muted Trumpet 弱音小号<br>
+61 French Horn 圆号<br>
+62 Brass Section 铜管组<br>
+63 Synth Brass 1 合成铜管1<br>
+64 Synth Brass 2 合成铜管2<br>
+哨片乐器<br>
+65 Soprano Sax 高音萨克斯<br>
+66 Alto Sax 中音萨克斯<br>
+67 Tenor Sax 次中音萨克斯<br>
+68 Baritone Sax 上低音萨克斯<br>
+69 Oboe 双簧管<br>
+70 English Horn 英国管<br>
+71 Bassoon 大管<br>
+72 Clarinet 单簧管<br>
+吹管乐器<br>
+73 Piccolo 短笛<br>
+74 Flute 长笛<br>
+75 Recorder 竖笛<br>
+76 Pan Flute 排笛<br>
+77 Bottle Blow 吹瓶口<br>
+78 Skakuhachi 尺八<br>
+79 Whistle 哨<br>
+80 Ocarina 奥卡雷那<br>
+合成主音<br>
+81 Lead 1 (square) 合成主音1（方波）<br>
+82 Lead 2 (sawtooth) 合成主音2（锯齿）<br>
+83 Lead 3 (calliope lead) 合成主音3（汽笛风琴）<br>
+84 Lead 4 (chiff lead) 合成主音4 （吹管）<br>
+85 Lead 5 (charang) 合成主音5（吉他）<br>
+86 Lead 6 (voice) 合成主音6（人声）<br>
+87 Lead 7 (fifths) 合成主音7（五度）<br>
+88 Lead 8 (bass+lead) 合成主音8（低音加主音）<br>
+合成柔音<br>
+89 Pad 1 (new age) 合成柔音1（新时代）<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这个音色有时也被称为Fantasia 幻想<br>
+90 Pad 2 (warm) 合成柔音（暖音）<br>
+91 Pad 3 (polysynth) 合成柔音3（复合成）<br>
+92 Pad 4 (choir) 合成柔音4（合唱）<br>
+93 Pad 5 (bowed) 合成柔音5（弓弦）<br>
+94 Pad 6 (metallic) 合成柔音6（金属）<br>
+95 Pad 7 (halo) 合成柔音7（光晕）<br>
+96 Pad 8 (sweep) 合成柔音8（扫弦）<br>
+合成特效<br>
+97 FX 1 (rain) 合成特效1（雨）<br>
+98 FX 2 (soundtrack) 合成特效2（音轨）<br>
+99 FX 3 (crystal) 合成特效3（水晶）<br>
+100 FX 4 (atmosphere) 合成特效4（大气）<br>
+101 FX 5 (light) 合成特效5（轻柔）<br>
+102 FX 6 (goblins) 合成特效6（小妖）<br>
+103 FX 7 (echoes) 合成特效7（回声）<br>
+104 FX 8 (sci-fi) 合成特效8（科幻）<br>
+民族乐器<br>
+105 Sitar 锡塔尔<br>
+106 Banjo 班卓<br>
+107 Shamisen 三味线<br>
+108 Koto 筝<br>
+109 Kalimba 卡林巴<br>
+110 Bagpipe 风笛<br>
+111 Fiddle 古提琴<br>
+112 Shanai 唢呐<br>
+打击乐<br>
+113 Tinkle Bell 铃铛<br>
+114 Agogo 拉丁打铃<br>
+115 Steel Drums 钢鼓<br>
+116 Woodblock 木块<br>
+117 Taiko Drum 太鼓<br>
+118 Melodic Tom 嗵鼓<br>
+119 Synth Drum 合成鼓<br>
+120 Reverse Cymbal 铜钹<br>
+声音特效<br>
+121 Guitar Fret Noise 磨弦声<br>
+122 Breath Noise 呼吸声<br>
+123 Seashore 海浪声<br>
+124 Bird Tweet 鸟鸣声<br>
+125 Telephone 电话<br>
+126 Helicopter 直升机声<br>
+127 Applause 鼓掌声<br>
+128 Gunshot 枪声<br>
+				编号为2和50的乐器采样自Grand GM波表，其他均来自8rock11e。<br>
+				8rock11e是一款非常优秀的原生sf2波表音源，以带感的合成器著称。而Grand GM则侧重于采样。<br>
+				鼓组的音高与音色对应关系如下<br>
+				27 Hi Q 激光枪声<br>
+28 Synth Slap 合成拍音<br>
+29 Scratch 2 高音刷音<br>
+30 Scratch 1 低音刷音<br>
+31 Sticks 鼓槌<br>
+32 Square Click 敲方板<br>
+33 Metronome Click 节拍器<br>
+34 Metronome Bell 节拍器(钟)<br>
+35 Acoustic Bass Drum 低音大鼓<br>
+36 Bass Drum 1 高音大鼓<br>
+37 Side Stick 鼓边<br>
+38 Acoustic Snare 小鼓<br>
+39 Hand Clap 拍手声<br>
+40 Electric Snare 电子小鼓<br>
+41 Low Floor Tom 低音落地嗵鼓<br>
+42 Closed Hi-Hat 合音踩镲<br>
+43 High Floor Tom 高音落地嗵鼓<br>
+44 Pedal Hi-Hat 踏音踩镲<br>
+45 Low Tom 低音嗵鼓<br>
+46 Open Hi-Hat 强音踩镲<br>
+47 Low-Mid Tom 中低音嗵鼓<br>
+48 Hi-Mid Tom 中高音嗵鼓<br>
+49 Crash Cymbal 1 低砸音镲<br>
+50 High Tom 高音嗵鼓<br>
+51 Ride Cymbal 1 低浮音镲<br>
+52 Chinese Cymbal 中国镲<br>
+53 Ride Bell 浮音镲碗<br>
+54 Tambourine 铃鼓<br>
+55 Splash Cymbal 溅音镲<br>
+56 Cowbell 牛铃<br>
+57 Crash Cymbal 2 高砸音镲<br>
+58 Vibraslap 颤音叉<br>
+59 Ride Cymbal 2 高浮音镲<br>
+60 Hi Bongo 高音邦戈<br>
+61 Low Bongo 低音邦戈<br>
+62 Mute Hi Conga 弱音康加<br>
+63 Open Hi Conga 强音康加<br>
+64 Low Conga 低音康加<br>
+65 High Timbale 高音铜鼓<br>
+66 Low Timbale 低音铜鼓<br>
+67 High Agogo 高音拉丁打铃<br>
+68 Low Agogo 低音拉丁打铃<br>
+69 Cabasa 沙锤<br>
+70 Maracas 响葫芦<br>
+71 Short Whistle 短哨<br>
+72 Long Whistle 长哨<br>
+73 Short Guiro 短锯琴<br>
+74 Long Guiro 长锯琴<br>
+75 Claves 击杆<br>
+76 Hi Wood Block 高音木块<br>
+77 Low Wood Block 低音木块<br>
+78 Mute Cuica 弱音吉加<br>
+79 Open Cuica 强音吉加<br>
+80 Mute Triangle 弱音三角铁<br>
+81 Open Triangle 强音三角铁<br>
+82 Shaker 沙锤（比69沙锤高）<br>
+83 Jingle Bell 铃铛<br>
+84 Bell Tree 树铃<br>
+85 Castanets 响板<br>
+86 Mute Surdo 弱音瑟多<br>
+87 Open Surdo 强音瑟多<br>
+				如有疑问，请加群询问。<br>
+				<br>
+				<br>
+				<br>
+			</font>
+		</div>
+	</section>
+	<footer>
+<div id="sub-footer">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							Copyright &copy; 2022.AGANG All rights reserved.
+						</p>
+					</div>
+			</div>
+</div>
+		</div>
+	</div>
+	</footer>
+	</section>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
