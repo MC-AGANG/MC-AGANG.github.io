@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>VB.NET从入门到女装_AGANG文档</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- css -->
+<link rel="icon" href="../favicon.ico">
+<link href="../css/bootstrap.min.css" rel="stylesheet" />
+<link href="../css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="../css/jcarousel.css" rel="stylesheet" />
+<link href="../css/flexslider.css" rel="stylesheet" />
+<link href="../css/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="../highlight/styles/vs2015.min.css">
+<script src="../highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<!-- start header -->
+		<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <span class="navbar-header"><a class="navbar-brand" href="../../index.html"><img src="../img/logo.png" alt="logo"/></a></span>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../../index.html">首页</a></li> 
+						<li class="active"><a href="../../article/index.html">文档</a></li>
+						<li><a href="../../software/index.html">软件</a></li>
+                        <li><a href="../../minecraftmusic/index.html">红石音乐</a></li>
+                        <li><a href="../../qqgroup/index.html">QQ群</a></li>
+                        <li><a href="https://space.bilibili.com/219556059">B站主页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header><!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">1.2 HelloWorld?</h2>
+			</div>
+		</div>
+	</div>
+	<section id="content">
+	<div class="container">	 
+		<div class="row"> 
+			<div class="col-md-12">
+				<div class="about-logo">
+					<h4>*本节将开始编写代码<span class="color"></span></h4>
+				</div>
+				
+
+			</div>
+		</div>   
+		<div class="row"> 
+			<div class="col-md-12">
+				<div class="about-logo">
+					<h2>开始写代码！<span class="color"></span></h2>
+						<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<font color="#000000">
+								回到上一节的那个界面。VS非常的方便，你想给哪个控件写代码，就双击一下，比如我们双击一下这个按钮。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.1.png" alt=""/>
+					</div>
+							<font color="#000000">
+								于是就能看到以下界面<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.2.png" alt=""/>
+					</div>
+							<font color="#000000">
+								<br>
+								千万不要被吓到，这里面的很多东西我们先不用管，只需要知道光标所在的那一行就是我们需要写代码的地方就行了。<br>
+								先说一下我们的目标，我们是要实现点击按钮之后在文本框里面显示HelloWorld。但是，那个文本框叫啥？<br>
+								所以，回去看看吧，在上面的标签页中，点击Form1.vb[设计]*，回到刚才的设计界面。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.3.png" alt=""/>
+					</div>
+							<font color="#000000">
+								<br>
+								选中文本框，可以看到右下角属性面板显示它的名称是Textbox1。<br>
+								Textbox1我们称其为对象。
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.4.png" alt=""/>
+					</div>
+							<font color="#000000">
+								<br>
+								再次双击按钮，回到代码编辑模式，在里面输入Textbox1（VB不区分大小写），然后加一个.<br>
+								这时候，神奇的事情发生了，可以看到光标下方出现了一个提示框，提示我们下一步的操作。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.5.png" alt=""/>
+					</div>
+							<font color="#000000">
+								<br>
+								聪明的同学应该已经看出来要选哪个了。很明显，是Text。<br>
+								顺便一提，扳手符号代表这是属性，五角星代表vs推测你会使用这个，并且把它放在了最前面，可以说是非常的人性化了。<br>
+								于是，我们补全代码。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.6.png" alt=""/>
+					</div>
+							<font color="#000000">
+								<br>
+								那么需要设置的对象有了，属性有了，该如何去设置呢？<br>
+								这个时候就要引入“赋值”这个概念。<br>
+								举个例子，我们设定x和y，要让x的值等于y，就可以这样写：x=y<br>
+								这样y的值就给了x。<br>
+								那么给属性赋值也是这个道理，使用等于号。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.7.png" alt=""/>
+					</div>
+							<font color="#000000">
+								<br>
+								然而，这样貌似不太对劲的样子。<br>
+								红色波浪线就代表这个地方有错。<br>
+								那么该怎么修改？<br>
+								很简单，这里引入一个常识，字符串需要使用引号引起来才行，那么我们给HelloWorld的两侧加上引号。<br>
+								好，这样就不会报错了。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.8.png" alt=""/>
+					</div>
+							<font color="#000000">
+								<br>
+								点击上方启动，界面被加载出来，然后点击按钮，果然成功了。<br>
+								那么到这一步，恭喜你，VB.NET入门了！<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.9.png" alt=""/>
+					</div>
+							<font color="#000000">
+								<br>
+								同样的，我们可以为窗体上其他控件写代码，甚至是窗体自己。所以双击一下窗体……<br>
+								可以看到自己多出来了两行代码，另外与刚才不同的是，红框的地方变成了Form1，代表我们是再给窗体自身写代码。<br>
+								而蓝框的地方变成了Load。刚才给按钮写代码的时候是Click，Click代表点击时触发，而Load代表窗口一加载就立即触发。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.10.png" alt=""/>
+					</div>
+							<font color="#000000">
+								<br>
+								下拉菜单可以看到里面还有很多事件可供选择，如果看不懂可以用翻译软件直接英语翻译成中文，大家可以自己去试试。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.11.png" alt=""/>
+					</div>
+							<font color="#000000">
+								<br>
+								那么我们仍然选择Load，下面让窗口一加载就把按钮上的文字变成click me。<br>
+								跟上面改变文本框的方法一样，按钮也同样拥有Text这个属性，给这个属性赋值即可。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.12.png" alt=""/>
+					</div>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/1.2.13.png" alt=""/>
+					</div>
+							<br>
+					</div>
+					<h3>
+						<br><br>
+					完整代码如下，可自行复制
+					</h3>
+					<pre>
+<font>VB.NET</font>
+<code class="language-vbnet">
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        TextBox1.Text = "HelloWorld"
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Button1.Text = "Click Me"
+    End Sub
+End Class
+			</code>
+		</pre>
+				</div>
+
+			</div>
+		</div>  
+		<div class="row">
+			<div class="pricing-action">
+			<a href="1.1.html" class="btn btn-medium btn-theme"><i class="icon-bolt"></i>上一篇</a>
+				<a href="1.3.html" class="btn btn-medium btn-theme"><i class="icon-bolt"></i>下一篇</a>
+			</div>
+			
+		</div>
+		</div>
+	</section>
+	<footer>
+<div id="sub-footer">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							Copyright &copy; 2022.AGANG All rights reserved.
+						</p>
+					</div>
+			</div>
+</div>
+		</div>
+	</div>
+	</footer>
+	</section>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
