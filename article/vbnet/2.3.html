@@ -13,7 +13,9 @@
 <link href="../css/jcarousel.css" rel="stylesheet" />
 <link href="../css/flexslider.css" rel="stylesheet" />
 <link href="../css/style.css" rel="stylesheet" />
- 
+<link rel="stylesheet" href="../highlight/styles/vs2015.min.css">
+<script src="../highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -51,7 +53,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h2 class="pageTitle">VB.NET从入门到女装</h2>
+				<h2 class="pageTitle">2.3 ⚠浮点⚠</h2>
 			</div>
 		</div>
 	</div>
@@ -60,54 +62,86 @@
 		<div class="row"> 
 			<div class="col-md-12">
 				<div class="about-logo">
-					<h2>第0章 前言与准备<span class="color"></span></h2>
-						<div class="col-md-5 col-lg-offset-1">
-							<a href="0.1.html"><h4>0.1 VB系列语言的历史</h4></a>
-							<a href="0.2.html"><h4>0.2 为什么选择VB.NET</h4></a>
-							<a href="0.3.html"><h4>0.3 准备开始</h4></a>
-					</div>
-				</div>
-				
-
-			</div>
-		</div>  
-		<div class="row"> 
-			<div class="col-md-12">
-				<div class="about-logo">
-					<h2>第1章 制作第一个程序<span class="color"></span></h2>
-						<div class="col-md-5 col-lg-offset-1">
-							<a href="1.1.html"><h4>1.1 创建工程，熟悉界面</h4></a>
-							<a href="1.2.html"><h4>1.2 Hello World?</h4></a>
-							<a href="1.3.html"><h4>1.3 生成exe</h4></a>
-					</div>
-				</div>
-				
-
-			</div>
-		</div>
-		<div class="row"> 
-			<div class="col-md-12">
-				<div class="about-logo">
-					<h2>第2章 变量(以加法计算器为例)<span class="color"></span></h2>
-						<div class="col-md-5 col-lg-offset-1">
-							<a href="2.1.html"><h4>2.1 定义变量与数据读取</h4></a>
-							<a href="2.2.html"><h4>2.2 加法</h4></a>
-							<a href="2.3.html"><h4>2.3 ⚠浮点⚠</h4></a>
-					</div>
+					<h4>*VB几乎不会遇到浮点精度问题，因此读者可以视情况跳过本节<span class="color"></span></h4>
 				</div>
 				
 
 			</div>
 		</div>   
-				<div class="row"> 
+		<div class="row"> 
 			<div class="col-md-12">
 				<div class="about-logo">
-					<h2>持续更新中……<span class="color"></span></h2>
+					<h2>从一个梗出发<span class="color"></span></h2>
+						<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<font color="#000000">
+								相信对于"0.1+0.2=0.300000004"这个“梗”，大家都有所听闻，那么，VB会不会出现这种问题呢？<br>
+								但是对于现在的代码，我可以告诉大家，你得到的结果会是0。<br>
+								因为定义的类型使用了Integer整数类型，此时你输入一个小数，会被取整，最终只能得到0+0。<br>
+								因此，我们先对代码进行一个修改。。。<br>
+							</font>
+							<pre>
+<font>VB.NET</font>
+<code class="language-vbnet">
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim a As Double
+        Dim b As Double
+        a = Val(TextBox1.Text)
+        b = Val(TextBox2.Text)
+        TextBox3.Text = CStr(a + b)
+    End Sub
+End Class
+			</code>
+		</pre>
+							<font color="#000000">
+								这里把Integer改成了Double，这就是双精度浮点类型，可以用于表示小数。<br>
+								然后尝试输入0.1+0.2<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/2.3.1.png" alt=""/>
+					</div>
+							<font color="#000000">
+								可以看到，VB并没有像其他语言一样输出0.3000000004,而是直接输出了0.3，那么这是不是意味着VB不存在浮点精度问题呢？<br>
+								或许真的可以这么说，因为VB为了简化运算，默认使用“伪浮点”进行计算。<br>
+								好处一目了然，我们不需要考虑精度问题，而坏处是牺牲了一部分性能，虽说现在的电脑不需要考虑这一点性能。<br>
+								那如果我们需要真正的浮点怎么办呢？尝试着把代码改成下面的样子<br>
+							</font>
+							<pre>
+<font>VB.NET</font>
+<code class="language-vbnet">
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim a As Double
+        Dim b As Double
+        a = 0.1F
+        b = 0.2F
+        TextBox3.Text = CStr(a + b)
+    End Sub
+End Class
+			</code>
+		</pre>
+							<font color="#000000">
+								然后尝试运行一下。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/2.3.2.png" alt=""/>
+					</div>
+							<font color="#000000">
+								可以看到，现在VB进行的就是真正的浮点运算了。<br>
+								那么总结一下，VB的浮点，或者说小数比较特殊，我们不需要考虑浮点精度的问题，对我们来说非常方便。<br>
+							</font>
+					</div>
 				</div>
-				
 
 			</div>
 		</div>  
+		<div class="row">
+			<div class="pricing-action">
+			<a href="2.2.html" class="btn btn-medium btn-theme"><i class="icon-bolt"></i>上一篇</a>
+				<a href="content.html" class="btn btn-medium btn-theme"><i class="icon-bolt"></i>下一篇</a>
+			</div>
+			
+		</div>
 		</div>
 	</section>
 	<footer>

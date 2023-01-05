@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>VB.NET从入门到女装_AGANG文档</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- css -->
+<link rel="icon" href="../favicon.ico">
+<link href="../css/bootstrap.min.css" rel="stylesheet" />
+<link href="../css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="../css/jcarousel.css" rel="stylesheet" />
+<link href="../css/flexslider.css" rel="stylesheet" />
+<link href="../css/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="../highlight/styles/vs2015.min.css">
+<script src="../highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<!-- start header -->
+		<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <span class="navbar-header"><a class="navbar-brand" href="../../index.html"><img src="../img/logo.png" alt="logo"/></a></span>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../../index.html">首页</a></li> 
+						<li class="active"><a href="../../article/index.html">文档</a></li>
+						<li><a href="../../software/index.html">软件</a></li>
+                        <li><a href="../../minecraftmusic/index.html">红石音乐</a></li>
+                        <li><a href="../../qqgroup/index.html">QQ群</a></li>
+                        <li><a href="https://space.bilibili.com/219556059">B站主页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header><!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">2.1 定义变量与数据读取</h2>
+			</div>
+		</div>
+	</div>
+	<section id="content">
+	<div class="container">	 
+		<div class="row"> 
+			<div class="col-md-12">
+				<div class="about-logo">
+					<h4>*本节主要讲解变量问题<span class="color"></span></h4>
+				</div>
+				
+
+			</div>
+		</div>   
+		<div class="row"> 
+			<div class="col-md-12">
+				<div class="about-logo">
+					<h2>Dim声明变量<span class="color"></span></h2>
+						<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<font color="#000000">
+								我们新建一个工程，取名简易计算器，然后在像下图一样摆出文本框和按钮控件。<br>
+								这一步我们先来学习变量的基本用法。<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/2.1.1.png" alt=""/>
+					</div>
+							<font color="#000000">
+								双击按钮，并且为它添加如下语句：<br>
+							</font>
+							<pre>
+<font>VB.NET</font>
+<code class="language-vbnet">
+Dim s As String
+			</code>
+		</pre>
+							<font color="#000000">
+								添加完后应该像这样：<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/2.1.2.png" alt=""/>
+					</div>
+							<font color="#000000">
+								下面来解释一下这行代码的意义。<br>
+								Dim是dimension的缩写，有“划分”的意思。因此，这里指从电脑内存中划分出一片区域。<br>
+								as好理解，而string在这里是字符串的意思，<br>
+								因此，连起来，就是“从内存中划分出一块区域s来表示字符串”。<br>
+								或者，简单一点，说人话就是“把s定义为字符串”。<br>
+								到这里，VB的特性已经能体现出来了，就是以英文单词作为关键字，非常好理解。<br>
+								那么至此，我们就成功地定义了一个字符串变量s，接下来就能进行下一步操作了。<br>
+								<br>
+								在进行下一步操作之前，先回想一下，上一章中我们是怎么把内容输出的。<br>
+								那么，反过来会怎么样呢？<br>
+								于是，<br>
+							</font>
+							<pre>
+<font>VB.NET</font>
+<code class="language-vbnet">
+Dim s As String
+s = TextBox1.Text
+			</code>
+		</pre>
+							<font color="#000000">
+								这个应该不难理解。<br>
+								既然TextBox1.Text = xxx是赋值给文本框的文字，那么反过来，s = TextBox1.Text就应该是把文本框的文字赋值给变量s。<br>
+								好了，现在文本框中的内容就存到s中了，那么接下来就可以对s进行一些操作了。<br>
+								先来尝试对一串文字进行“加法”比如说在文本框中文字的末尾加上“world”，那么就可以写成<br>
+							</font>
+														<pre>
+<font>VB.NET</font>
+<code class="language-vbnet">
+Dim s As String
+s = TextBox1.Text
+s = s + "World"
+			</code>
+		</pre>
+							<font color="#000000">
+								没错，VB非常的纯粹，+就是+<br>
+								好了，接下来我们尝试输出回TextBox1<br>
+							</font>
+																					<pre>
+<font>VB.NET</font>
+<code class="language-vbnet">
+Dim s As String
+s = TextBox1.Text
+s = s + "World"
+TextBox1.Text = s
+			</code>
+		</pre>
+							<font color="#000000">
+								运行程序，在文本框中输入一些字符，然后点一下button1按钮<br>
+							</font>
+							<div class="col-md-5 col-lg-offset-0 col-lg-12">
+							<img class="img-responsive" src="image/2.1.3.png" alt=""/>
+					</div>
+							<font color="#000000">
+								可以看到，成功在文本框后面加上了想要的内容<br>
+								你甚至可以多次点击按钮，让后面world的数量越来越多。<br>
+								那么反过来，如果写成s = "World" + s，那么运行结果中的world就会出现在最前面。<br>
+								同时，你也许回觉得，s = s + "World"，出现了两个s，是不是太冗余了呢？<br>
+								那么，确实有改进的方法，比如可以这样<br>
+							</font>
+							<pre>
+<font>VB.NET</font>
+<code class="language-vbnet">
+Dim s As String
+s = TextBox1.Text
+s += "World"
+TextBox1.Text = s
+			</code>
+		</pre>
+					<font color="#000000">
+								运行一遍，可以发现运行结果与上面的相同，也就是说s += "World"等价于s = s + "World"<br>
+						像+=这样的写法叫做“复合分配”，使得代码看起来更加简明。<br>
+						那么到这里，你就学会了变量的定义和简单的使用。<br>
+						下一节将会展开真正对于数字的加法。<br>
+							</font>
+					</div>
+					<h3>
+						<br><br>
+					完整代码如下，可自行复制
+					</h3>
+					<pre>
+<font>VB.NET</font>
+<code class="language-vbnet">
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim s As String
+        s = TextBox1.Text
+        s = s + "World"
+        TextBox1.Text = s
+    End Sub
+End Class
+			</code>
+		</pre>
+				</div>
+
+			</div>
+		</div>  
+		<div class="row">
+			<div class="pricing-action">
+			<a href="1.3.html" class="btn btn-medium btn-theme"><i class="icon-bolt"></i>上一篇</a>
+				<a href="2.1.html" class="btn btn-medium btn-theme"><i class="icon-bolt"></i>下一篇</a>
+			</div>
+			
+		</div>
+		</div>
+	</section>
+	<footer>
+<div id="sub-footer">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							Copyright &copy; 2022.AGANG All rights reserved.
+						</p>
+					</div>
+			</div>
+</div>
+		</div>
+	</div>
+	</footer>
+	</section>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
